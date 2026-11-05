@@ -1,0 +1,9 @@
+{
+  "model": "Adaptive forecast",
+  "source": "calibration-only adaptive experiment; chosen before inspecting any final model historical test losses",
+  "locked_utc": "2026-11-05T19:43:26.811295+00:00",
+  "primary_lock_sha256": "092721aaf744a53f4371e12adf95914bc5b71cf9ecf18f84d131ce3b4c98cf69",
+  "adaptive_lock_sha256": "e93ee6e4339cf7d6388727dc94c9ae73ad02ff90f73c7294fae6808d7f5c6d2b",
+  "timing_caveat": "Primary test computation was already running; adaptive selection code read only development and calibration records, not test loss files. Base model remained frozen.",
+  "never_choose_between_variants_from_test": true
+}

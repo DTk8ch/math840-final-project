@@ -1,0 +1,63 @@
+{
+  "winner": "Equal ensemble of top two",
+  "base_models": [
+    "HGB log normalized",
+    "HGB delta all history"
+  ],
+  "recipe": {
+    "Equal ensemble of top two": [
+      "HGB log normalized",
+      "HGB delta all history"
+    ]
+  },
+  "specifications": {
+    "HGB log normalized": {
+      "kind": "hgb",
+      "target": "lognormalized",
+      "days": 365,
+      "half": 90,
+      "aug": false,
+      "weather": true
+    },
+    "HGB delta all history": {
+      "kind": "hgb",
+      "target": "delta",
+      "days": null,
+      "half": 180,
+      "aug": false,
+      "weather": true
+    }
+  },
+  "selected_on": "development only; no later test scores",
+  "time_utc": "2026-11-05T19:16:55.025471+00:00",
+  "test_opened": false,
+  "interval": {
+    "rule": "absolute",
+    "probability": 0.95,
+    "pool_scenarios": [
+      "moderate",
+      "bias_high",
+      "bias_low"
+    ],
+    "calibration_coverage": 0.9635416666666666,
+    "coverage_target_met": true
+  },
+  "implementation_sha256": {
+    "core.py": "5d908745fc1239669035a7516fcb4de54e3fbb84005228adf03d082a1d334350",
+    "experiment.py": "a216f171b616db5bf1d0bfc03b2970fa8f349ed90a18e98055d60b10d5912bd5"
+  },
+  "data_sha256": {
+    "train.csv": "9bcb0808359d5440c3db61b77813e751d91247ee3ac3e294b78e5a736c8a1496",
+    "weather_forecast.csv": "08bb8359441103272173db72a02b764a22f002177ca1442db5a019b6fbbcafc7"
+  },
+  "tree_parameters": {
+    "max_iter": 120,
+    "max_leaf_nodes": 15,
+    "max_depth": 5,
+    "learning_rate": 0.06,
+    "l2_regularization": 5,
+    "min_samples_leaf": 30,
+    "early_stopping": false,
+    "random_state": 840
+  }
+}

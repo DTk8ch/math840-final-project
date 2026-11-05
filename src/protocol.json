@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "created_before_v2_losses": true,
+  "training_stride_hours": 24,
+  "forecast_horizon_hours": 48,
+  "complete_target_boundary": "training_origin + 48 <= forecast_origin",
+  "development": [
+    {"name":"dev_2023_autumn","start":"2023-10-01 01:00:00","count":12,"step_days":4},
+    {"name":"dev_2024_spring","start":"2024-04-01 01:00:00","count":12,"step_days":4}
+  ],
+  "calibration_warmup": {"start":"2024-06-30 01:00:00","count":16,"step_days":2},
+  "calibration": {"start":"2024-08-01 01:00:00","count":24,"step_days":2},
+  "independent_test_blocks": [
+    {"name":"test_2024_autumn","start":"2024-10-01 01:00:00","count":30,"step_days":2},
+    {"name":"test_2025_autumn","start":"2025-10-01 01:00:00","count":30,"step_days":2}
+  ],
+  "test_2025_warmup": {"start":"2025-08-30 01:00:00","count":16,"step_days":2},
+  "recent_diagnostic_warmup": {"start":"2026-08-30 01:00:00","count":16,"step_days":2},
+  "recent_diagnostic": {"name":"diagnostic_2026_october","start":"2026-10-01 01:00:00","count":13,"step_days":2},
+  "recent_is_independent": false,
+  "weather_scenarios": ["observed","moderate","strong","bias_high","bias_low"],
+  "primary_weather_scenario": "moderate",
+  "point_selection": "Average day-2 log pooled RMSE ratio to Seasonal Naive over both development periods and observed/moderate weather. Require development MAPE no worse than Naive when possible. Check biased-weather robustness before locking.",
+  "ensemble_order": "Evaluate individuals first, then only an equal-weight average of the top two and a fixed origin-time regime fallback of the top individual.",
+  "interval_rules": ["absolute 0.95","absolute 0.975","signed 0.95","signed 0.975"],
+  "interval_groups": "horizon day 1/2 crossed with supplied daylight flag; original seasonal-naive interval retained for the official baseline",
+  "interval_selection": "Calibration-only lowest day-2 Winkler among rules with at least 95% moderate-scenario coverage; otherwise best coverage, clearly flagging failure.",
+  "test_policy": "Lock model, ensemble weights, regime rule and interval rule before opening either test block; only locked winner and official Naive are scored there. No retuning from test or recent diagnostic.",
+  "rolling_interval_updates": "Only completed earlier blocks enter rolling error pools; selected rule stays fixed.",
+  "success": "Test RMSE at least 15% below Naive, Winkler at least 10% below Naive and >=95% coverage; show both days and every period instead of hiding failures.",
+  "late_work": true,
+  "public_leaderboard_values_used_for_fitting": false
+}

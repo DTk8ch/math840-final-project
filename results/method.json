@@ -1,0 +1,38 @@
+{
+  "selected_model": "Adaptive forecast",
+  "base_model": "Equal ensemble of top two",
+  "calibration": {
+    "rule": "absolute",
+    "probability": 0.95,
+    "pool_scenarios": [
+      "moderate",
+      "bias_high",
+      "bias_low"
+    ],
+    "calibration_coverage": 0.9618055555555557
+  },
+  "adaptive_window": 8,
+  "adaptive_shrink": 0.0,
+  "horizon": 48,
+  "training_stride_hours": 24,
+  "model_history_days": [
+    365,
+    null
+  ],
+  "age_half_life_days": [
+    90,
+    180
+  ],
+  "training_origin_count": 1366,
+  "training_row_count": 65568,
+  "feature_count": 77,
+  "selection_timing": "Primary test computation was already running; adaptive selection code read only development and calibration records, not test loss files. Base model remained frozen.",
+  "forecast_sha256": "0139e867913be5e8a6407ac6b5435c199fb86587766a1e42ea34caea5acc1006",
+  "model_source_sha256": {
+    "core.py": "5d908745fc1239669035a7516fcb4de54e3fbb84005228adf03d082a1d334350",
+    "experiment.py": "a216f171b616db5bf1d0bfc03b2970fa8f349ed90a18e98055d60b10d5912bd5",
+    "adaptive.py": "c2f07153c3193505e4adce9370ff0345e6a1afac506735a3695bece6240001c1",
+    "forecast.py": "aabba360f65641a9aa2ca2f6d7c6f901cc230dca13949fd8feb973a95b8dc3f2",
+    "forecast_delivery.py": "e7187ca56b4f64f8e321dfa367511c167763f5f4d155e76e225e2b57f584a789"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "all_cells_executed": true,
+  "execution": "Jupyter in-process kernel, fresh Python process",
+  "isolated_report_inputs_only": true,
+  "code_cells": 15,
+  "png_figures": 4,
+  "display_tables": 13,
+  "errors": 0,
+  "absolute_paths_in_notebook": false,
+  "metrics_recalculated_and_checked": 90,
+  "hourly_actuals_checked_against_train": 52560,
+  "official_submission_check": "passed",
+  "model_data_and_forecast_unchanged": true,
+  "forecast_sha256": "0139e867913be5e8a6407ac6b5435c199fb86587766a1e42ea34caea5acc1006",
+  "report_sha256": "ad749ab737eafe46799f940b5c7e8e9353dd04d0c0c164aa8e3638292e4ff20a",
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "matplotlib": "3.10.8",
+    "nbformat": "5.10.4",
+    "ipykernel": "7.2.0"
+  }
+}

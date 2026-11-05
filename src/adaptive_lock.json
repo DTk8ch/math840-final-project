@@ -1,0 +1,21 @@
+{
+  "selected": "8 blocks; shrink 0.0",
+  "model": "Adaptive forecast",
+  "base_model": "Equal ensemble of top two",
+  "window": 8,
+  "shrink": 0.0,
+  "interval": {
+    "rule": "absolute",
+    "probability": 0.95,
+    "pool_scenarios": [
+      "moderate",
+      "bias_high",
+      "bias_low"
+    ],
+    "calibration_coverage": 0.9618055555555557
+  },
+  "selected_from": "calibration point losses only; no historical test losses inspected",
+  "locked_utc": "2026-11-05T19:41:27.394378+00:00",
+  "primary_lock_sha256": "092721aaf744a53f4371e12adf95914bc5b71cf9ecf18f84d131ce3b4c98cf69",
+  "implementation_sha256": "c2f07153c3193505e4adce9370ff0345e6a1afac506735a3695bece6240001c1"
+}

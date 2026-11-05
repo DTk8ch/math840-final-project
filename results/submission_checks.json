@@ -1,0 +1,15 @@
+{
+  "clean_environment": "new Python 3.12 venv; dependencies installed from local wheels",
+  "pip_check": "passed",
+  "reproduced_in_separate_project_copy": true,
+  "saved_final_csv_removed_before_reproduction": true,
+  "exact_byte_match": true,
+  "forecast_sha256": "0139e867913be5e8a6407ac6b5435c199fb86587766a1e42ea34caea5acc1006",
+  "official_check_submission": "passed",
+  "rows": 48,
+  "first_hour": "2026-10-27 01:00:00",
+  "last_hour": "2026-10-29 00:00:00",
+  "model_recipe_and_numeric_settings_unchanged": true,
+  "historical_numeric_results_unchanged": true,
+  "notebook_check": "results/notebook_checks.json"
+}

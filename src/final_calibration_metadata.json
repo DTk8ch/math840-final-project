@@ -1,0 +1,9 @@
+{
+  "lock_sha256": "092721aaf744a53f4371e12adf95914bc5b71cf9ecf18f84d131ce3b4c98cf69",
+  "data_sha256": {
+    "train.csv": "9bcb0808359d5440c3db61b77813e751d91247ee3ac3e294b78e5a736c8a1496",
+    "weather_forecast.csv": "08bb8359441103272173db72a02b764a22f002177ca1442db5a019b6fbbcafc7"
+  },
+  "predictions_sha256": "03e4b67a176775716cfe3b399b812d71325f2e3257a33d039e9f2f859f304ca5",
+  "last_target_index": 33479
+}
